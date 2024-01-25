@@ -1,0 +1,462 @@
+5. История команд в терминале Ubuntu
+   - Сохранить и выложить историю ваших терминальных команд в Ubuntu.
+В формате: Файла с ФИО, датой сдачи, номером группы(или потока)
+
+
+ilya@Ilya-linux:~$ cat > Pets.txt
+собаки, кошки, хомяки
+ilya@Ilya-linux:~$ cat > PackAnimals.txt
+лошади, верблюды, ослы
+ilya@Ilya-linux:~$ cat Pets.txt PackAnimals.txt > HumanFriends.txt
+ilya@Ilya-linux:~$ cat HumanFriends.txt
+собаки, кошки, хомяки
+лошади, верблюды, ослы
+ilya@Ilya-linux:~$ mv HumanFriends.txt "Human Friends.txt"
+ilya@Ilya-linux:~$ -ls
+Команда «-ls» не найдена. Возможно, вы имели в виду:
+  command 'fls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'i-ls' from deb integrit (4.1-1.1)
+  command 'jls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'hls' from deb hfsutils (3.2.6-15build2)
+  command 'ils' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'ols' from deb speech-tools (1:2.5.0-12)
+  command 'ls' from deb coreutils (8.32-4.1ubuntu1)
+  command 'als' from deb atool (0.39.0-11)
+Try: sudo apt install <deb name>
+ilya@Ilya-linux:~$ ls
+ 123                 'Human Friends.txt'   shared                                                  Документы
+ bin                  kont1                snap                                                    Загрузки
+ compose.yml          list_file.txt        test                                                    Изображения
+ docker-compose.yml   new_directory        test.py                                                 Музыка
+ Dockerfile           out.txt              test-sem3-db                                            Общедоступные
+ example.txt          PackAnimals.txt      virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb    'Рабочий стол'
+ file1.txt            Pets.txt             virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb.1  'Снимок экрана от 2023-11-26 23-48-21.png'
+ file2.txt            renamed_file2.txt    virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb.2   Шаблоны
+ file4.txt            scriptdz7.sh         world_lnk
+ GB                   scripts              Видео
+ilya@Ilya-linux:~$ mkdir MyDirectory
+ilya@Ilya-linux:~$ mv "Human Friends.txt" MyDirectory/
+ilya@Ilya-linux:~$ ls MyDirectory/
+'Human Friends.txt'
+ilya@Ilya-linux:~$ sudo apt-get update
+[sudo] пароль для ilya: 
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]                                                                          
+Пол:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]                                                                        
+Сущ:4 http://nginx.org/packages/ubuntu jammy InRelease                                                                                              
+Пол:5 https://download.docker.com/linux/ubuntu jammy InRelease [48,8 kB]                                                                            
+Пол:6 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                              
+Пол:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1 318 kB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [558 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [266 kB]
+Пол:10 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [24,6 kB]                  
+Пол:11 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted i386 Packages [34,8 kB]            
+Пол:12 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1 331 kB]
+Пол:13 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [387 kB]                         
+Пол:14 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [218 kB]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1 033 kB]         
+Пол:16 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [682 kB]             
+Пол:17 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [232 kB]  
+Пол:18 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [42,1 kB]      
+Пол:19 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse i386 Packages [4 164 B]       
+Пол:20 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [10,1 kB]      
+Пол:21 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [41,7 kB]            
+Пол:22 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main i386 Packages [33,9 kB]            
+Пол:23 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [24,2 kB]       
+Пол:24 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [13,4 kB]        
+Пол:25 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1 068 kB]        
+Пол:26 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [203 kB]
+Пол:27 http://security.ubuntu.com/ubuntu jammy-security/restricted i386 Packages [33,2 kB]
+Пол:28 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1 260 kB]
+Пол:29 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [206 kB]
+Пол:30 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [585 kB]
+Пол:31 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [833 kB]
+Пол:32 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [159 kB]
+Пол:33 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [37,1 kB]
+Пол:34 http://security.ubuntu.com/ubuntu jammy-security/multiverse i386 Packages [1 356 B]
+Пол:35 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [7 476 B]
+Получено 11,0 MB за 3с (3 914 kB/s)
+Чтение списков пакетов… Готово
+N: Пропускается получение настроенного файла «nginx/binary-i386/Packages», так как репозиторий «http://nginx.org/packages/ubuntu jammy InRelease» не поддерживает архитектуру «i386»
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-all.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons-small (stable/dep11/icons-48x48.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель CNF (stable/cnf/Commands-amd64) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель CNF (stable/cnf/Commands-all) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-all.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons-small (stable/dep11/icons-48x48.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель CNF (stable/cnf/Commands-amd64) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель CNF (stable/cnf/Commands-all) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+ilya@Ilya-linux:~$ sudo apt-get install MySQL-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+E: Невозможно найти пакет MySQL-server
+ilya@Ilya-linux:~$    sudo apt install mysql-server
+   
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Будут установлены следующие дополнительные пакеты:
+  libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl libhtml-template-perl libmecab2
+  libprotobuf-lite23 mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server-8.0
+  mysql-server-core-8.0
+Предлагаемые пакеты:
+  libipc-sharedcache-perl mailx tinyca
+Следующие НОВЫЕ пакеты будут установлены:
+  libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl libhtml-template-perl libmecab2
+  libprotobuf-lite23 mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server mysql-server-8.0
+  mysql-server-core-8.0
+Обновлено 0 пакетов, установлено 19 новых пакетов, для удаления отмечено 0 пакетов, и 82 пакетов не обновлено.
+Необходимо скачать 29,3 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 242 MB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mysql-common all 5.8+1.0.8 [7 212 B]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-core-8.0 amd64 8.0.35-0ubuntu0.22.04.1 [2 682 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-8.0 amd64 8.0.35-0ubuntu0.22.04.1 [22,7 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libevent-core-2.1-7 amd64 2.1.12-stable-1build3 [93,9 kB]
+Пол:5 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libevent-pthreads-2.1-7 amd64 2.1.12-stable-1build3 [7 642 B]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libmecab2 amd64 0.996-14build9 [199 kB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libprotobuf-lite23 amd64 3.12.4-1ubuntu7.22.04.1 [209 kB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server-core-8.0 amd64 8.0.35-0ubuntu0.22.04.1 [17,6 MB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server-8.0 amd64 8.0.35-0ubuntu0.22.04.1 [1 438 kB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libcgi-pm-perl all 4.54-1 [188 kB]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libfcgi0ldbl amd64 2.4.2-2build2 [28,0 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libfcgi-perl amd64 0.82+ds-1build1 [22,8 kB]
+Пол:13 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libcgi-fast-perl all 1:2.15-1 [10,5 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libfcgi-bin amd64 2.4.2-2build2 [11,2 kB]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libhtml-template-perl all 2.97-1.1 [59,1 kB]
+Пол:16 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-utils amd64 0.996-14build9 [4 850 B]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-ipadic all 2.7.0-20070801+main-3 [6 718 kB]
+Пол:18 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4 384 B]
+Пол:19 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server all 8.0.35-0ubuntu0.22.04.1 [9 464 B]
+Получено 29,3 MB за 4с (8 070 kB/s)
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета mysql-common.
+(Чтение базы данных … на данный момент установлен 191771 файл и каталог.)
+Подготовка к распаковке …/0-mysql-common_5.8+1.0.8_all.deb …
+Распаковывается mysql-common (5.8+1.0.8) …
+Выбор ранее не выбранного пакета mysql-client-core-8.0.
+Подготовка к распаковке …/1-mysql-client-core-8.0_8.0.35-0ubuntu0.22.04.1_amd64.deb …
+Распаковывается mysql-client-core-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Выбор ранее не выбранного пакета mysql-client-8.0.
+Подготовка к распаковке …/2-mysql-client-8.0_8.0.35-0ubuntu0.22.04.1_amd64.deb …
+Распаковывается mysql-client-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Выбор ранее не выбранного пакета libevent-core-2.1-7:amd64.
+Подготовка к распаковке …/3-libevent-core-2.1-7_2.1.12-stable-1build3_amd64.deb …
+Распаковывается libevent-core-2.1-7:amd64 (2.1.12-stable-1build3) …
+Выбор ранее не выбранного пакета libevent-pthreads-2.1-7:amd64.
+Подготовка к распаковке …/4-libevent-pthreads-2.1-7_2.1.12-stable-1build3_amd64.deb …
+Распаковывается libevent-pthreads-2.1-7:amd64 (2.1.12-stable-1build3) …
+Выбор ранее не выбранного пакета libmecab2:amd64.
+Подготовка к распаковке …/5-libmecab2_0.996-14build9_amd64.deb …
+Распаковывается libmecab2:amd64 (0.996-14build9) …
+Выбор ранее не выбранного пакета libprotobuf-lite23:amd64.
+Подготовка к распаковке …/6-libprotobuf-lite23_3.12.4-1ubuntu7.22.04.1_amd64.deb …
+Распаковывается libprotobuf-lite23:amd64 (3.12.4-1ubuntu7.22.04.1) …
+Выбор ранее не выбранного пакета mysql-server-core-8.0.
+Подготовка к распаковке …/7-mysql-server-core-8.0_8.0.35-0ubuntu0.22.04.1_amd64.deb …
+Распаковывается mysql-server-core-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет mysql-common (5.8+1.0.8) …
+update-alternatives: используется /etc/mysql/my.cnf.fallback для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Выбор ранее не выбранного пакета mysql-server-8.0.
+(Чтение базы данных … на данный момент установлено 191990 файлов и каталогов.)
+Подготовка к распаковке …/00-mysql-server-8.0_8.0.35-0ubuntu0.22.04.1_amd64.deb …
+Распаковывается mysql-server-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Выбор ранее не выбранного пакета libcgi-pm-perl.
+Подготовка к распаковке …/01-libcgi-pm-perl_4.54-1_all.deb …
+Распаковывается libcgi-pm-perl (4.54-1) …
+Выбор ранее не выбранного пакета libfcgi0ldbl:amd64.
+Подготовка к распаковке …/02-libfcgi0ldbl_2.4.2-2build2_amd64.deb …
+Распаковывается libfcgi0ldbl:amd64 (2.4.2-2build2) …
+Выбор ранее не выбранного пакета libfcgi-perl:amd64.
+Подготовка к распаковке …/03-libfcgi-perl_0.82+ds-1build1_amd64.deb …
+Распаковывается libfcgi-perl:amd64 (0.82+ds-1build1) …
+Выбор ранее не выбранного пакета libcgi-fast-perl.
+Подготовка к распаковке …/04-libcgi-fast-perl_1%3a2.15-1_all.deb …
+Распаковывается libcgi-fast-perl (1:2.15-1) …
+Выбор ранее не выбранного пакета libfcgi-bin.
+Подготовка к распаковке …/05-libfcgi-bin_2.4.2-2build2_amd64.deb …
+Распаковывается libfcgi-bin (2.4.2-2build2) …
+Выбор ранее не выбранного пакета libhtml-template-perl.
+Подготовка к распаковке …/06-libhtml-template-perl_2.97-1.1_all.deb …
+Распаковывается libhtml-template-perl (2.97-1.1) …
+Выбор ранее не выбранного пакета mecab-utils.
+Подготовка к распаковке …/07-mecab-utils_0.996-14build9_amd64.deb …
+Распаковывается mecab-utils (0.996-14build9) …
+Выбор ранее не выбранного пакета mecab-ipadic.
+Подготовка к распаковке …/08-mecab-ipadic_2.7.0-20070801+main-3_all.deb …
+Распаковывается mecab-ipadic (2.7.0-20070801+main-3) …
+Выбор ранее не выбранного пакета mecab-ipadic-utf8.
+Подготовка к распаковке …/09-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb …
+Распаковывается mecab-ipadic-utf8 (2.7.0-20070801+main-3) …
+Выбор ранее не выбранного пакета mysql-server.
+Подготовка к распаковке …/10-mysql-server_8.0.35-0ubuntu0.22.04.1_all.deb …
+Распаковывается mysql-server (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет libmecab2:amd64 (0.996-14build9) …
+Настраивается пакет mysql-client-core-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет libfcgi0ldbl:amd64 (2.4.2-2build2) …
+Настраивается пакет libcgi-pm-perl (4.54-1) …
+Настраивается пакет libfcgi-bin (2.4.2-2build2) …
+Настраивается пакет libhtml-template-perl (2.97-1.1) …
+Настраивается пакет libprotobuf-lite23:amd64 (3.12.4-1ubuntu7.22.04.1) …
+Настраивается пакет mecab-utils (0.996-14build9) …
+Настраивается пакет libevent-core-2.1-7:amd64 (2.1.12-stable-1build3) …
+Настраивается пакет mysql-client-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет libfcgi-perl:amd64 (0.82+ds-1build1) …
+Настраивается пакет libevent-pthreads-2.1-7:amd64 (2.1.12-stable-1build3) …
+Настраивается пакет mecab-ipadic (2.7.0-20070801+main-3) …
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic для предоставления /var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом режиме
+Настраивается пакет libcgi-fast-perl (1:2.15-1) …
+Настраивается пакет mysql-server-core-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет mecab-ipadic-utf8 (2.7.0-20070801+main-3) …
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic-utf8 для предоставления /var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом реж
+име
+Настраивается пакет mysql-server-8.0 (8.0.35-0ubuntu0.22.04.1) …
+update-alternatives: используется /etc/mysql/mysql.cnf для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 8172
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+Настраивается пакет mysql-server (8.0.35-0ubuntu0.22.04.1) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для libc-bin (2.35-0ubuntu3.5) …
+ilya@Ilya-linux:~$    sudo systemctl start mysql
+   
+ilya@Ilya-linux:~$    sudo systemctl status mysql
+   
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2024-01-25 18:10:58 MSK; 2min 28s ago
+    Process: 8358 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+   Main PID: 8367 (mysqld)
+     Status: "Server is operational"
+      Tasks: 37 (limit: 4599)
+     Memory: 365.5M
+        CPU: 6.395s
+     CGroup: /system.slice/mysql.service
+             └─8367 /usr/sbin/mysqld
+
+янв 25 18:10:56 Ilya-linux systemd[1]: Starting MySQL Community Server...
+янв 25 18:10:58 Ilya-linux systemd[1]: Started MySQL Community Server.
+ilya@Ilya-linux:~$    sudo mysql_secure_installation
+   
+
+Securing the MySQL server deployment.
+
+Connecting to MySQL using a blank password.
+
+VALIDATE PASSWORD COMPONENT can be used to test passwords
+and improve security. It checks the strength of password
+and allows the users to set only those passwords which are
+secure enough. Would you like to setup VALIDATE PASSWORD component?
+
+Press y|Y for Yes, any other key for No: no
+
+Skipping password set for root as authentication with auth_socket is used by default.
+If you would like to use password authentication instead, this can be done with the "ALTER_USER" command.
+See https://dev.mysql.com/doc/refman/8.0/en/alter-user.html#alter-user-password-management for more information.
+
+By default, a MySQL installation has an anonymous user,
+allowing anyone to log into MySQL without having to have
+a user account created for them. This is intended only for
+testing, and to make the installation go a bit smoother.
+You should remove them before moving into a production
+environment.
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+
+Normally, root should only be allowed to connect from
+'localhost'. This ensures that someone cannot guess at
+the root password from the network.
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+By default, MySQL comes with a database named 'test' that
+anyone can access. This is also intended only for testing,
+and should be removed before moving into a production
+environment.
+
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : n
+
+ ... skipping.
+Reloading the privilege tables will ensure that all changes
+made so far will take effect immediately.
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+All done! 
+ilya@Ilya-linux:~$ sudo apt install mysql-client
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие НОВЫЕ пакеты будут установлены:
+  mysql-client
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 82 пакетов не обновлено.
+Необходимо скачать 9 354 B архивов.
+После данной операции объём занятого дискового пространства возрастёт на 35,8 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client all 8.0.35-0ubuntu0.22.04.1 [9 354 B]
+Получено 9 354 B за 0с (176 kB/s)            
+Выбор ранее не выбранного пакета mysql-client.
+(Чтение базы данных … на данный момент установлено 192157 файлов и каталогов.)
+Подготовка к распаковке …/mysql-client_8.0.35-0ubuntu0.22.04.1_all.deb …
+Распаковывается mysql-client (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет mysql-client (8.0.35-0ubuntu0.22.04.1) …
+ilya@Ilya-linux:~$ sudo dpkg --install google-crome-stable_current_amd.deb
+dpkg: ошибка: нет доступа к архиву «google-crome-stable_current_amd.deb»: Нет такого файла или каталога
+ilya@Ilya-linux:~$      sudo dpkg -i telegram-desktop.deb
+     
+dpkg: ошибка: нет доступа к архиву «telegram-desktop.deb»: Нет такого файла или каталога
+ilya@Ilya-linux:~$ sudo apt-get install -f
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 82 пакетов не обновлено.
+ilya@Ilya-linux:~$      sudo dpkg -i telegram-desktop.deb
+     
+dpkg: ошибка: нет доступа к архиву «telegram-desktop.deb»: Нет такого файла или каталога
+ilya@Ilya-linux:~$      sudo dpkg -i telegram-desktop.deb
+     
+dpkg: ошибка: нет доступа к архиву «telegram-desktop.deb»: Нет такого файла или каталога
+ilya@Ilya-linux:~$      sudo dpkg -i telegram-desktop.deb
+     
+dpkg: ошибка: нет доступа к архиву «telegram-desktop.deb»: Нет такого файла или каталога
+ilya@Ilya-linux:~$    tar -xvf tsetup.4.14.9.tar.xz
+   
+Telegram/
+Telegram/Updater
+Telegram/Telegram
+ilya@Ilya-linux:~$    cd Telegram
+   
+ilya@Ilya-linux:~/Telegram$    ./Telegram
+   
+QPainter::begin: Paint device returned engine == 0, type: 2
+QWidget::render: Cannot render with an inactive painter
+ilya@Ilya-linux:~/Telegram$ ./Telegram
+QPainter::begin: Paint device returned engine == 0, type: 2
+QWidget::render: Cannot render with an inactive painter
+ilya@Ilya-linux:~/Telegram$ cd
+ilya@Ilya-linux:~$ sudo dpkg --install google-crome-stable_current_amd.deb
+[sudo] пароль для ilya: 
+dpkg: ошибка: нет доступа к архиву «google-crome-stable_current_amd.deb»: Нет такого файла или каталога
+ilya@Ilya-linux:~$ cd Downloads
+bash: cd: Downloads: Нет такого файла или каталога
+ilya@Ilya-linux:~$ cd Pfuheprb
+bash: cd: Pfuheprb: Нет такого файла или каталога
+ilya@Ilya-linux:~$ cd Загрузки
+ilya@Ilya-linux:~/Загрузки$    sudo dpkg -i google-chrome-stable_current_amd64.deb
+   
+Выбор ранее не выбранного пакета google-chrome-stable.
+(Чтение базы данных … на данный момент установлено 192159 файлов и каталогов.)
+Подготовка к распаковке google-chrome-stable_current_amd64.deb …
+Распаковывается google-chrome-stable (121.0.6167.85-1) …
+Настраивается пакет google-chrome-stable (121.0.6167.85-1) …
+update-alternatives: используется /usr/bin/google-chrome-stable для предоставления /usr/bin/x-www-browser (x-www-browser) в автоматическом режиме
+update-alternatives: используется /usr/bin/google-chrome-stable для предоставления /usr/bin/gnome-www-browser (gnome-www-browser) в автоматическом режиме
+update-alternatives: используется /usr/bin/google-chrome-stable для предоставления /usr/bin/google-chrome (google-chrome) в автоматическом режиме
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1ubuntu3) …
+Обрабатываются триггеры для desktop-file-utils (0.26-1ubuntu3) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+ilya@Ilya-linux:~/Загрузки$    sudo dpkg -r google-chrome-stable
+   
+(Чтение базы данных … на данный момент установлено 192272 файла и каталога.)
+Удаляется google-chrome-stable (121.0.6167.85-1) …
+update-alternatives: используется /usr/bin/firefox для предоставления /usr/bin/x-www-browser (x-www-browser) в автоматическом режиме
+update-alternatives: используется /usr/bin/firefox для предоставления /usr/bin/gnome-www-browser (gnome-www-browser) в автоматическом режиме
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1ubuntu3) …
+Обрабатываются триггеры для desktop-file-utils (0.26-1ubuntu3) …
+ilya@Ilya-linux:~/Загрузки$ 
+
