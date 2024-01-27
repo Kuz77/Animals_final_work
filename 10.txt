@@ -1,0 +1,70 @@
+mysql> DELETE FROM Верблюд;
+Query OK, 3 rows affected (0,01 sec)
+
+mysql> 
+mysql> CREATE TABLE Лошади_и_Ослы (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   порода VARCHAR(255),
+    ->   скорость INT,
+    ->   упрямость BOOLEAN
+    -> );
+Query OK, 0 rows affected (0,12 sec)
+
+mysql> INSERT INTO Лошади_и_Ослы (порода, скорость, упрямость)
+    -> SELECT порода, скорость, NULL
+    -> FROM Лошадь;
+Query OK, 3 rows affected (0,01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Лошади_и_Ослы (порода, скорость, упрямость)
+    -> SELECT порода, NULL, упрямость
+    -> FROM Осел;
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> DROP TABLE Лошадь;
+Query OK, 0 rows affected (0,13 sec)
+
+mysql> DROP TABLE Осел;
+Query OK, 0 rows affected (0,13 sec)
+
+mysql> SHOW TABLES;
++-----------------------------------------+
+| Tables_in_Друзья_человека               |
++-----------------------------------------+
+| Pack_animal                             |
+| Pet                                     |
+| Верблюд                                 |
+| Животные                                |
+| Кот                                     |
+| Лошади_и_Ослы                           |
+| Собака                                  |
+| Хомяк                                   |
++-----------------------------------------+
+8 rows in set (0,00 sec)
+
+mysql> DESCRIBE Лошади_и_Ослы;
++--------------------+--------------+------+-----+---------+----------------+
+| Field              | Type         | Null | Key | Default | Extra          |
++--------------------+--------------+------+-----+---------+----------------+
+| id                 | int          | NO   | PRI | NULL    | auto_increment |
+| порода             | varchar(255) | YES  |     | NULL    |                |
+| скорость           | int          | YES  |     | NULL    |                |
+| упрямость          | tinyint(1)   | YES  |     | NULL    |                |
++--------------------+--------------+------+-----+---------+----------------+
+4 rows in set (0,00 sec)
+
+mysql> SELECT * FROM Лошади_и_Ослы;
++----+---------------------------------+------------------+--------------------+
+| id | порода                          | скорость         | упрямость          |
++----+---------------------------------+------------------+--------------------+
+|  1 | средняя лошадь                  |               60 |               NULL |
+|  2 | большая лошадь                  |               70 |               NULL |
+|  3 | лошадка поменьше                |               50 |               NULL |
+|  4 | упрямый 1                       |             NULL |                  1 |
+|  5 | ИА                              |             NULL |                  0 |
+|  6 | упрямый 2                       |             NULL |                  1 |
++----+---------------------------------+------------------+--------------------+
+6 rows in set (0,00 sec)
+
+mysql> 
