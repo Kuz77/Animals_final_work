@@ -1,0 +1,106 @@
+mysql> CREATE TABLE Животные (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   имя VARCHAR(255),
+    ->   дата_рождения DATE
+    -> );
+Query OK, 0 rows affected (0,09 sec)
+
+mysql> CREATE TABLE Pet (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   id_животного INT,
+    ->   уровень_эмпатии INT,
+    ->   FOREIGN KEY (id_животного) REFERENCES Животные(id)
+    -> );
+Query OK, 0 rows affected (0,06 sec)
+
+mysql> CREATE TABLE Собака (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   id_pet INT,
+    ->   порода VARCHAR(255),
+    ->   выполняемые_команды VARCHAR(255),
+    ->   FOREIGN KEY (id_pet) REFERENCES Pet(id)
+    -> );
+Query OK, 0 rows affected (0,05 sec)
+
+mysql> CREATE TABLE Кот (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   id_pet INT,
+    ->   порода VARCHAR(255),
+    ->   наличие_шерсти BOOLEAN,
+    ->   FOREIGN KEY (id_pet) REFERENCES Pet(id)
+    -> );
+Query OK, 0 rows affected (0,03 sec)
+
+mysql> CREATE TABLE Хомяк (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   id_pet INT,
+    ->   порода VARCHAR(255),
+    ->   пугливость BOOLEAN,
+    ->   FOREIGN KEY (id_pet) REFERENCES Pet(id)
+    -> );
+Query OK, 0 rows affected (0,03 sec)
+
+mysql> CREATE TABLE Pack_animal (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   id_животного INT,
+    ->   грузоподъемность INT,
+    ->   FOREIGN KEY (id_животного) REFERENCES Животные(id)
+    -> );
+Query OK, 0 rows affected (0,06 sec)
+
+mysql> CREATE TABLE Лошадь (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   id_pack_animal INT,
+    ->   порода VARCHAR(255),
+    ->   скорость INT,
+    ->   FOREIGN KEY (id_pack_animal) REFERENCES Pack_animal(id)
+    -> );
+Query OK, 0 rows affected (0,08 sec)
+
+mysql> CREATE TABLE Верблюд (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   id_pack_animal INT,
+    ->   порода VARCHAR(255),
+    ->   количество_горбов INT,
+    ->   FOREIGN KEY (id_pack_animal) REFERENCES Pack_animal(id)
+    -> );
+Query OK, 0 rows affected (0,05 sec)
+
+mysql> CREATE TABLE Осел (
+    ->   id INT PRIMARY KEY AUTO_INCREMENT,
+    ->   id_pack_animal INT,
+    ->   порода VARCHAR(255),
+    ->   упрямость BOOLEAN,
+    ->   FOREIGN KEY (id_pack_animal) REFERENCES Pack_animal(id)
+    -> );
+Query OK, 0 rows affected (0,11 sec)
+
+mysql> SHOW TABLES;
++-----------------------------------------+
+| Tables_in_Друзья_человека               |
++-----------------------------------------+
+| Pack_animal                             |
+| Pet                                     |
+| Верблюд                                 |
+| Животные                                |
+| Кот                                     |
+| Лошадь                                  |
+| Осел                                    |
+| Собака                                  |
+| Хомяк                                   |
++-----------------------------------------+
+9 rows in set (0,01 sec)
+
+mysql> SHOW DATABASES;
++-------------------------------+
+| Database                      |
++-------------------------------+
+| information_schema            |
+| mysql                         |
+| performance_schema            |
+| sys                           |
+| Друзья_человека               |
++-------------------------------+
+5 rows in set (0,00 sec)
+
+mysql> 
