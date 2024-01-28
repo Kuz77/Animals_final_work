@@ -1,12 +1,12 @@
 package org.example;
 
 class Camel extends PackAnimal {
+    private int humpCount;
     private String breed;
-    private int numberOfHumps;
 
-    public Camel(String name, String dateOfBirth, int carryingCapacity, String breed, int numberOfHumps) {
-        super(name, dateOfBirth, carryingCapacity);
+    public Camel(String name, String birthDate, int carryingCapacity, int humpCount, String breed) {
+        super(name, birthDate, carryingCapacity);
+        this.humpCount = humpCount;
         this.breed = breed;
-        this.numberOfHumps = numberOfHumps;
     }
 }

@@ -1,13 +1,13 @@
 package org.example;
 
 class Donkey extends PackAnimal {
+    private boolean stubborn;
     private String breed;
-    private boolean isStubborn;
 
-    public Donkey(String name, String dateOfBirth, int carryingCapacity, String breed, boolean isStubborn) {
-        super(name, dateOfBirth, carryingCapacity);
+    public Donkey(String name, String birthDate, int carryingCapacity, boolean stubborn, String breed) {
+        super(name, birthDate, carryingCapacity);
+        this.stubborn = stubborn;
         this.breed = breed;
-        this.isStubborn = isStubborn;
     }
 }
 
