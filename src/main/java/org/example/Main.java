@@ -103,10 +103,10 @@ public class Main {
                         } else if (animalType == 4) {
                             System.out.print("Введите грузоподъемность лошади: ");
                             int carryingCapacity = scanner.nextInt();
-                            scanner.nextLine(); // Чтение символа новой строки после ввода числа
+                            scanner.nextLine();
                             System.out.print("Введите скорость лошади: ");
                             int speed = scanner.nextInt();
-                            scanner.nextLine(); // Чтение символа новой строки после ввода числа
+                            scanner.nextLine();
                             System.out.print("Введите породу лошади: ");
                             String breed = scanner.nextLine();
                             Animal horse = new Horse(name, birthDate, carryingCapacity, speed, breed);
@@ -115,10 +115,10 @@ public class Main {
                         } else if (animalType == 5) {
                             System.out.print("Введите грузоподъемность ослов: ");
                             int carryingCapacity = scanner.nextInt();
-                            scanner.nextLine(); // Чтение символа новой строки после ввода числа
+                            scanner.nextLine();
                             System.out.print("Введите упрямость ослов (true/false): ");
                             boolean stubborn = scanner.nextBoolean();
-                            scanner.nextLine(); // Чтение символа новой строки после ввода значения
+                            scanner.nextLine();
                             System.out.print("Введите породу ослов: ");
                             String breed = scanner.nextLine();
                             Animal donkey = new Donkey(name, birthDate, carryingCapacity, stubborn, breed);
@@ -127,10 +127,10 @@ public class Main {
                         } else if (animalType == 6) {
                             System.out.print("Введите грузоподъемность верблюда: ");
                             int carryingCapacity = scanner.nextInt();
-                            scanner.nextLine(); // Чтение символа новой строки после ввода числа
+                            scanner.nextLine();
                             System.out.print("Введите количество горбов верблюда: ");
                             int humpCount = scanner.nextInt();
-                            scanner.nextLine(); // Чтение символа новой строки после ввода числа
+                            scanner.nextLine();
                             System.out.print("Введите породу верблюда: ");
                             String breed = scanner.nextLine();
                             Animal camel = new Camel(name, birthDate, carryingCapacity, humpCount, breed);
@@ -174,23 +174,38 @@ public class Main {
                             System.out.println("Животное с таким именем не найдено.");
                         }
                         break;
+//                    case 4:
+//                        exit = true;
+//                        System.out.println("Программа завершена.");
+//                        break;
+//                    default:
+//                        System.out.println("Неверный выбор. Попробуйте еще раз.");
+//                        break;
+//                }
+//                System.out.println();
+//            }
+//            System.out.println("Всего животных: " + counter.getCount());
+//        } catch (Exception e) {
+//            System.out.println("Ошибка: " + e.getMessage());
+//        }
+//    }
+//}
                     case 4:
                         exit = true;
+                        System.out.println("Всего животных: " + counter.getCount());
                         System.out.println("Программа завершена.");
                         break;
+
                     default:
                         System.out.println("Неверный выбор. Попробуйте еще раз.");
                         break;
                 }
-                System.out.println();
             }
-            System.out.println("Всего животных: " + counter.getCount());
         } catch (Exception e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
     }
 }
-
 
 
 
